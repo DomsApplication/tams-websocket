@@ -1,0 +1,35 @@
+# docker-compose -f mysql-docker-compose.yml up -d
+# docker network create skmc-network
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0.39
+    container_name: mysql_server
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: master
+      MYSQL_USER: master
+      MYSQL_PASSWORD: master
+    ports:
+      - "3306:3306"
+    networks:
+      - skmc-network
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  mysql-client:
+    image: mysql:8.0.39
+    container_name: mysql_client
+    depends_on:
+      - mysql
+    tty: true  # Keeps the container running  
+    command: ["tail", "-f", "/dev/null"]
+    networks:
+      - skmc-network
+
+volumes:
+  mysql_data:
+
+networks:
+  skmc-network:
+    driver: bridge
