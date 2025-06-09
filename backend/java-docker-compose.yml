@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  java-app:
+    image: openjdk:17
+    container_name: java-container
+    environment:
+      - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+      - PATH=$JAVA_HOME/bin:$PATH
+      - LIBRARY_PATH=$JAVA_HOME/lib:$LIBRARY_PATH
+    volumes:
+      - ./app:/app  # Optional: Map your app directory to the container
+    ports:
+      - "8080:8080"  # Optional: Expose the app port (if your app runs on port 8080)
+    command: ["java", "-version"]  # You can change this command to run your actual Java app
