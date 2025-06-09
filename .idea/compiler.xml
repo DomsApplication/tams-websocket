@@ -7,16 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shavika-server-websocket" />
+        <module name="tams-server-websocket" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="shavika-server-websocket" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="shavika-server-websocket" options="-parameters" />
+      <module name="tams-server-websocket" options="-parameters" />
     </option>
   </component>
 </project>
