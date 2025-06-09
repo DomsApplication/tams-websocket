@@ -93,7 +93,7 @@ jobs:
           target: /home/shavika-tams
 
       - name: Run the application in server
-        uses: appleboy/ssh-action@v1.2.1
+        uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ vars.BACKEND_DROPLET_IP }}
           username: root

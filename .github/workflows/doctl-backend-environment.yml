@@ -128,7 +128,7 @@ jobs:
 
       - name: Post Deployment install additional softwares
         if: env.DROPLET_EXISTS == 'false'
-        uses: appleboy/ssh-action@v1.2.1
+        uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ vars.BACKEND_DROPLET_IP }}
           username: root
