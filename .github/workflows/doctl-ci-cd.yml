@@ -71,7 +71,7 @@ jobs:
           mvn clean package -Dmaven.test.skip
 
       - name: Move application package to remote server
-        uses: appleboy/scp-action@v0.1.7
+        uses: appleboy/scp-action@v1.0.0
         with:
           host: ${{ vars.BACKEND_DROPLET_IP }}
           username: root
@@ -82,7 +82,7 @@ jobs:
           target: /home/shavika-tams
 
       - name: Move application properties file to remote server
-        uses: appleboy/scp-action@v0.1.7
+        uses: appleboy/scp-action@v1.0.0
         with:
           host: ${{ vars.BACKEND_DROPLET_IP }}
           username: root
