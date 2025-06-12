@@ -34,6 +34,15 @@
         "routes": [{ "path": "/" }]
       }
     ],
+    "domains" : [
+      {
+        "domain": "skt.tams.merav.co.in",
+        "type": "PRIMARY",
+        "wildcard": true,
+        "zone": "merav.co.in",
+        "minimum_tls_version": "1.3"
+      }
+    ],
     "static_sites": [],
     "jobs": [],
     "workers": [],
