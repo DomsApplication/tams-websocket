@@ -14,7 +14,7 @@ websocket:
   database:
     driver-class-name: com.mysql.cj.jdbc.Driver
     host: tams-db-inst-dev-do-user-21795668-0.g.db.ondigitalocean.com
-    port: 3306
+    port: 25060
     username: tams_user
     password: AVNS_aNo8ipoyuf3SmYEbIlA
     name: tams_database
