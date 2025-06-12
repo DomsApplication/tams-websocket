@@ -10,7 +10,7 @@ STARTUP_COMMAND="java $JVM_ARGS $JAVA_OPTS \
   -XX:OnError='echo JVM exited with error' \
   -XX:MaxRAMPercentage=75.0 \
   -XX:MinRAMPercentage=75.0 \
-  -jar /etc/shavika-websocket/shavika-websocket-standalone-1.0.0.jar"
+  -jar /etc/tams-websocket/tams-websocket-1.0.0.jar"
 
 # Log the command to ensure it's constructed correctly (optional for debugging)
 echo "Starting application with command: $STARTUP_COMMAND"

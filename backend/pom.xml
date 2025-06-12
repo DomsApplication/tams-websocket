@@ -113,7 +113,7 @@
     </dependencies>
 
     <build>
-        <finalName>${project.name}-standalone-${project.version}</finalName>
+        <finalName>${project.name}-${project.version}</finalName>
         <plugins>
 
             <!-- Maven Compiler Plugin to ensure Java 17 compatibility -->

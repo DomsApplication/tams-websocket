@@ -20,24 +20,24 @@
 
 ########## aws ECR tag & push  ##########
 ###Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS TOOLS for PowerShell:
-#aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <aws-account>.dkr.ecr.<region>.amazonaws.com
+#aws ecr get-loginEntity-password --region <region> | docker loginEntity --username AWS --password-stdin <aws-account>.dkr.ecr.<region>.amazonaws.com
 ###Build your Docker image using the following command.
 #docker buildx build --platform linux/amd64,linux/arm64 --tag <aws-account>.dkr.ecr.<region>.amazonaws.com/skmc:shavika-websocket_2024_12_29_08_45_20 --push .
 
 ########## Digital Ocean - Container Repository  ##########
 # https://docs.digitalocean.com/products/container-registry/getting-started/quickstart/#push-to-your-registry
-#doctl registry login
+#doctl registry loginEntity
 #docker tag shavika-websocket registry.digitalocean.com/tams-image-repo/shavika-websocket
 #docker push registry.digitalocean.com/tams-image-repo/shavika-websocket
 
 FROM amazoncorretto:17-alpine3.15-jdk
 RUN apk update && apk upgrade -U -a
 
-RUN mkdir -m777 /etc/shavika-websocket
-ADD start-service.sh /etc/shavika-websocket
-ADD target/shavika-websocket-standalone-1.0.0.jar /etc/shavika-websocket
-RUN chmod +x /etc/shavika-websocket/start-service.sh
-WORKDIR /etc/shavika-websocket
+RUN mkdir -m777 /etc/tams-websocket
+ADD start-service.sh /etc/tams-websocket
+ADD target/tams-websocket-1.0.0.jar /etc/tams-websocket
+RUN chmod +x /etc/tams-websocket/start-service.sh
+WORKDIR /etc/tams-websocket
 
 ENV JVM_XMX=4096m
 EXPOSE 8999

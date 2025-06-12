@@ -13,11 +13,11 @@ websocket:
   path: /websocket
   database:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    host: 127.0.0.1
+    host: tams-db-inst-dev-do-user-21795668-0.g.db.ondigitalocean.com
     port: 3306
     username: tams_user
-    password: tams_user
-    name: tams_java
+    password: AVNS_aNo8ipoyuf3SmYEbIlA
+    name: tams_database
 
 logging:
   path: ${SKMC_HOME}/log/
