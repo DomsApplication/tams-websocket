@@ -1,0 +1,42 @@
+{
+    "name": "tams-web-socket",
+    "region": "blr",
+    "services": [
+      {
+        "name": "tams-web-socket",
+        "source_dir": ".",
+        "image": {
+          "registry_type": "DOCR",
+          "registry": "tams-docker-registry",
+          "repository": "tams-websocket",
+          "tag": "latest"
+        },
+        "envs": [
+          {
+            "key": "SKMC_HOME",
+            "value": "/etc/tams-websocket",
+            "scope": "RUN_AND_BUILD_TIME"
+          }
+        ],
+        "health_check": {
+          "initial_delay_seconds": 30,
+          "period_seconds": 10,
+          "timeout_seconds": 5,
+          "success_threshold": 2,
+          "failure_threshold": 2,
+          "http_path": "/api/health",
+          "port": 8999
+        },
+        "http_port": 8999,
+        "instance_size_slug": "basic-xxs", 
+        "instance_count": 1,
+        "run_command": "",
+        "routes": [{ "path": "/" }]
+      }
+    ],
+    "static_sites": [],
+    "jobs": [],
+    "workers": [],
+    "databases": []
+  }
+  
