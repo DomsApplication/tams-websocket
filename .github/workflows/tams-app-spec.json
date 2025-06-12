@@ -36,9 +36,9 @@
     ],
     "domains" : [
       {
-        "domain": "skt.tams.merav.co.in",
+        "domain": "skt.merav.co.in",
         "type": "PRIMARY",
-        "wildcard": true,
+        "wildcard": false,
         "zone": "merav.co.in",
         "minimum_tls_version": "1.3"
       }
