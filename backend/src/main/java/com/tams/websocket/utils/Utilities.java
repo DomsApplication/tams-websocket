@@ -37,6 +37,8 @@ public class Utilities {
 
     private static final String SECRET_KEY = "Shav!ka_SKMC";
 
+    public static final String[] SECURITY_REQUEST_MATCHERS  = {"/websocket", "/api/health"};
+
     public static String getSystemEv(String key) {
         return System.getenv(key);
     }
