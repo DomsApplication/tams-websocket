@@ -60,4 +60,7 @@ public class DeviceInfo extends BaseEntity {
     @Column(name = "last_connected_time")
     private LocalDateTime lastConnectedTime;
 
+    @Column(name = "is_registered")
+    private Boolean isRegistered = false;
+
 }
